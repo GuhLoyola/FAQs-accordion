@@ -1,0 +1,107 @@
+html {
+    background-color: hsl(275, 100%, 97%);
+    background-image: url(../images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main .author{
+    margin-top: 50px;
+    color: hsl(292, 42%, 14%);
+}
+
+main .author a {
+    text-decoration: none;
+}
+
+main .author a:hover {
+    color: blueviolet;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+}
+
+.accordion {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    max-width: 550px;
+    min-height: 347px;
+    border-radius: 20px;
+    box-shadow: 0px 20px 20px -10px #00000040;
+    padding: 20px 25px;
+}
+
+.accordion .content {
+    width: 100%;
+}
+
+.accordion .content .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.accordion .content .header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: hsl(292, 42%, 14%);
+}
+
+.accordion .content .header img {
+    margin-right: 20px;
+}
+
+.accordion .items {
+    list-style: none;
+}
+
+.accordion .items .item {
+    cursor: pointer;
+    background-image: url(../images/icon-plus.svg);
+    background-repeat: no-repeat;
+    background-position: top -2px right 0;
+    margin: 20px 0;
+}
+
+.accordion .items .item .question {
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.2s ease;
+    padding-bottom: 15px;
+    width: 90%;
+    color: hsl(292, 42%, 14%);
+}
+
+.accordion .items .item .question:hover{
+    color: blueviolet;
+}
+
+.accordion .items .item .answer {
+    line-height: 1.5;
+    font-size: 15px;
+    display: none;
+    padding-bottom: 15px;
+    color: hsl(292, 16%, 49%);
+}
+
+.accordion .items .item.active h2 {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.accordion .items .item.active .answer {
+    display: block;
+}
+
+.accordion .items .item.active {
+    background-image: url(../images/icon-minus.svg);
+    transition: all 0.2s ease;
+}
